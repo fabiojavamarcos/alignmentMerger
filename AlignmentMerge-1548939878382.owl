@@ -1,0 +1,517 @@
+<?xml version="1.0"?><rdf:RDF
+xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+xmlns:owl="http://www.w3.org/2002/07/owl#"
+xmlns="http://cmt#"
+xml:base="http://cmt">
+<owl:Ontology rdf:about="file:/C:/dev/alignmentMerger/AlignmentMerge-1548939878382.owl"/>
+<owl:Class rdf:about="ProgramCommitteeChair">
+<owl:disjointWith rdf:resource="Author"/>
+<owl:disjointWith rdf:resource="Author"/>
+<owl:disjointWith rdf:resource="Administrator"/>
+<owl:disjointWith rdf:resource="Administrator"/>
+<owl:disjointWith rdf:resource="ProgramCommitteeMember"/>
+<owl:disjointWith rdf:resource="Member_PC"/>
+<owl:disjointWith rdf:resource="ConferenceMember"/>
+<owl:disjointWith rdf:resource="Member"/>
+<owl:disjointWith rdf:resource="email"/>
+<owl:disjointWith rdf:resource="hasEmail"/>
+<owl:disjointWith rdf:resource="Person"/>
+<owl:disjointWith rdf:resource="Person"/>
+<owl:disjointWith rdf:resource="Conference"/>
+<owl:disjointWith rdf:resource="Conference"/>
+</owl:Class>
+<owl:Class rdf:about="Chair_PC">
+<owl:disjointWith rdf:resource="Author"/>
+<owl:disjointWith rdf:resource="Author"/>
+<owl:disjointWith rdf:resource="Administrator"/>
+<owl:disjointWith rdf:resource="Administrator"/>
+<owl:disjointWith rdf:resource="ProgramCommitteeMember"/>
+<owl:disjointWith rdf:resource="Member_PC"/>
+<owl:disjointWith rdf:resource="ConferenceMember"/>
+<owl:disjointWith rdf:resource="Member"/>
+<owl:disjointWith rdf:resource="email"/>
+<owl:disjointWith rdf:resource="hasEmail"/>
+<owl:disjointWith rdf:resource="Person"/>
+<owl:disjointWith rdf:resource="Person"/>
+<owl:disjointWith rdf:resource="Conference"/>
+<owl:disjointWith rdf:resource="Conference"/>
+</owl:Class>
+<owl:Class rdf:about="Author">
+<owl:disjointWith rdf:resource="ProgramCommitteeChair"/>
+<owl:disjointWith rdf:resource="Administrator"/>
+<owl:disjointWith rdf:resource="ProgramCommitteeMember"/>
+<owl:disjointWith rdf:resource="ConferenceMember"/>
+<owl:disjointWith rdf:resource="email"/>
+<owl:disjointWith rdf:resource="Person"/>
+<owl:disjointWith rdf:resource="Conference"/>
+</owl:Class>
+<owl:Class rdf:about="Administrator">
+<owl:disjointWith rdf:resource="ProgramCommitteeChair"/>
+<owl:disjointWith rdf:resource="Author"/>
+<owl:disjointWith rdf:resource="ProgramCommitteeMember"/>
+<owl:disjointWith rdf:resource="ConferenceMember"/>
+<owl:disjointWith rdf:resource="email"/>
+<owl:disjointWith rdf:resource="Person"/>
+<owl:disjointWith rdf:resource="Conference"/>
+</owl:Class>
+<owl:Class rdf:about="ProgramCommitteeMember">
+<owl:disjointWith rdf:resource="ProgramCommitteeChair"/>
+<owl:disjointWith rdf:resource="Chair_PC"/>
+<owl:disjointWith rdf:resource="Author"/>
+<owl:disjointWith rdf:resource="Author"/>
+<owl:disjointWith rdf:resource="Administrator"/>
+<owl:disjointWith rdf:resource="Administrator"/>
+<owl:disjointWith rdf:resource="ConferenceMember"/>
+<owl:disjointWith rdf:resource="Member"/>
+<owl:disjointWith rdf:resource="email"/>
+<owl:disjointWith rdf:resource="hasEmail"/>
+<owl:disjointWith rdf:resource="Person"/>
+<owl:disjointWith rdf:resource="Person"/>
+<owl:disjointWith rdf:resource="Conference"/>
+<owl:disjointWith rdf:resource="Conference"/>
+</owl:Class>
+<owl:Class rdf:about="Member_PC">
+<owl:disjointWith rdf:resource="ProgramCommitteeChair"/>
+<owl:disjointWith rdf:resource="Chair_PC"/>
+<owl:disjointWith rdf:resource="Author"/>
+<owl:disjointWith rdf:resource="Author"/>
+<owl:disjointWith rdf:resource="Administrator"/>
+<owl:disjointWith rdf:resource="Administrator"/>
+<owl:disjointWith rdf:resource="ConferenceMember"/>
+<owl:disjointWith rdf:resource="Member"/>
+<owl:disjointWith rdf:resource="email"/>
+<owl:disjointWith rdf:resource="hasEmail"/>
+<owl:disjointWith rdf:resource="Person"/>
+<owl:disjointWith rdf:resource="Person"/>
+<owl:disjointWith rdf:resource="Conference"/>
+<owl:disjointWith rdf:resource="Conference"/>
+</owl:Class>
+<owl:Class rdf:about="ConferenceMember">
+<owl:disjointWith rdf:resource="ProgramCommitteeChair"/>
+<owl:disjointWith rdf:resource="Chair_PC"/>
+<owl:disjointWith rdf:resource="Author"/>
+<owl:disjointWith rdf:resource="Author"/>
+<owl:disjointWith rdf:resource="Administrator"/>
+<owl:disjointWith rdf:resource="Administrator"/>
+<owl:disjointWith rdf:resource="ProgramCommitteeMember"/>
+<owl:disjointWith rdf:resource="Member_PC"/>
+<owl:disjointWith rdf:resource="email"/>
+<owl:disjointWith rdf:resource="hasEmail"/>
+<owl:disjointWith rdf:resource="Person"/>
+<owl:disjointWith rdf:resource="Person"/>
+<owl:disjointWith rdf:resource="Conference"/>
+<owl:disjointWith rdf:resource="Conference"/>
+</owl:Class>
+<owl:Class rdf:about="Member">
+<owl:disjointWith rdf:resource="ProgramCommitteeChair"/>
+<owl:disjointWith rdf:resource="Chair_PC"/>
+<owl:disjointWith rdf:resource="Author"/>
+<owl:disjointWith rdf:resource="Author"/>
+<owl:disjointWith rdf:resource="Administrator"/>
+<owl:disjointWith rdf:resource="Administrator"/>
+<owl:disjointWith rdf:resource="ProgramCommitteeMember"/>
+<owl:disjointWith rdf:resource="Member_PC"/>
+<owl:disjointWith rdf:resource="email"/>
+<owl:disjointWith rdf:resource="hasEmail"/>
+<owl:disjointWith rdf:resource="Person"/>
+<owl:disjointWith rdf:resource="Person"/>
+<owl:disjointWith rdf:resource="Conference"/>
+<owl:disjointWith rdf:resource="Conference"/>
+</owl:Class>
+<owl:Class rdf:about="email">
+<owl:disjointWith rdf:resource="ProgramCommitteeChair"/>
+<owl:disjointWith rdf:resource="Chair_PC"/>
+<owl:disjointWith rdf:resource="Author"/>
+<owl:disjointWith rdf:resource="Author"/>
+<owl:disjointWith rdf:resource="Administrator"/>
+<owl:disjointWith rdf:resource="Administrator"/>
+<owl:disjointWith rdf:resource="ProgramCommitteeMember"/>
+<owl:disjointWith rdf:resource="Member_PC"/>
+<owl:disjointWith rdf:resource="ConferenceMember"/>
+<owl:disjointWith rdf:resource="Member"/>
+<owl:disjointWith rdf:resource="Person"/>
+<owl:disjointWith rdf:resource="Person"/>
+<owl:disjointWith rdf:resource="Conference"/>
+<owl:disjointWith rdf:resource="Conference"/>
+</owl:Class>
+<owl:Class rdf:about="hasEmail">
+<owl:disjointWith rdf:resource="ProgramCommitteeChair"/>
+<owl:disjointWith rdf:resource="Chair_PC"/>
+<owl:disjointWith rdf:resource="Author"/>
+<owl:disjointWith rdf:resource="Author"/>
+<owl:disjointWith rdf:resource="Administrator"/>
+<owl:disjointWith rdf:resource="Administrator"/>
+<owl:disjointWith rdf:resource="ProgramCommitteeMember"/>
+<owl:disjointWith rdf:resource="Member_PC"/>
+<owl:disjointWith rdf:resource="ConferenceMember"/>
+<owl:disjointWith rdf:resource="Member"/>
+<owl:disjointWith rdf:resource="Person"/>
+<owl:disjointWith rdf:resource="Person"/>
+<owl:disjointWith rdf:resource="Conference"/>
+<owl:disjointWith rdf:resource="Conference"/>
+</owl:Class>
+<owl:Class rdf:about="Person">
+<owl:disjointWith rdf:resource="ProgramCommitteeChair"/>
+<owl:disjointWith rdf:resource="Author"/>
+<owl:disjointWith rdf:resource="Administrator"/>
+<owl:disjointWith rdf:resource="ProgramCommitteeMember"/>
+<owl:disjointWith rdf:resource="ConferenceMember"/>
+<owl:disjointWith rdf:resource="email"/>
+<owl:disjointWith rdf:resource="Conference"/>
+</owl:Class>
+<owl:Class rdf:about="Conference">
+<owl:disjointWith rdf:resource="ProgramCommitteeChair"/>
+<owl:disjointWith rdf:resource="Author"/>
+<owl:disjointWith rdf:resource="Administrator"/>
+<owl:disjointWith rdf:resource="ProgramCommitteeMember"/>
+<owl:disjointWith rdf:resource="ConferenceMember"/>
+<owl:disjointWith rdf:resource="email"/>
+<owl:disjointWith rdf:resource="Person"/>
+</owl:Class>
+<owl:Class rdf:about="      <entity1 rdf:resource='ProgramCommitteeChair">
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ConferenceMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='email"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='hasEmail"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Conference"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Conference"/>
+</owl:Class>
+<owl:Class rdf:about="      <entity2 rdf:resource='Chair_PC">
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ConferenceMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='email"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='hasEmail"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Conference"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Conference"/>
+</owl:Class>
+<owl:Class rdf:about="      <entity1 rdf:resource='Author">
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeChair"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Chair_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ConferenceMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='email"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='hasEmail"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Conference"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Conference"/>
+</owl:Class>
+<owl:Class rdf:about="      <entity2 rdf:resource='Author">
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeChair"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Chair_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ConferenceMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='email"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='hasEmail"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Conference"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Conference"/>
+</owl:Class>
+<owl:Class rdf:about="      <entity1 rdf:resource='Administrator">
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeChair"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Chair_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ConferenceMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='email"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='hasEmail"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Conference"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Conference"/>
+</owl:Class>
+<owl:Class rdf:about="      <entity2 rdf:resource='Administrator">
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeChair"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Chair_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ConferenceMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='email"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='hasEmail"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Conference"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Conference"/>
+</owl:Class>
+<owl:Class rdf:about="      <entity1 rdf:resource='ProgramCommitteeMember">
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeChair"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Chair_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ConferenceMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='email"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='hasEmail"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Conference"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Conference"/>
+</owl:Class>
+<owl:Class rdf:about="      <entity2 rdf:resource='Member_PC">
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeChair"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Chair_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ConferenceMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='email"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='hasEmail"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Conference"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Conference"/>
+</owl:Class>
+<owl:Class rdf:about="      <entity1 rdf:resource='ConferenceMember">
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeChair"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Chair_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='email"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='hasEmail"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Conference"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Conference"/>
+</owl:Class>
+<owl:Class rdf:about="      <entity2 rdf:resource='Member">
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeChair"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Chair_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='email"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='hasEmail"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Conference"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Conference"/>
+</owl:Class>
+<owl:Class rdf:about="      <entity1 rdf:resource='email">
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeChair"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Chair_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ConferenceMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Conference"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Conference"/>
+</owl:Class>
+<owl:Class rdf:about="      <entity2 rdf:resource='hasEmail">
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeChair"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Chair_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ConferenceMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Conference"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Conference"/>
+</owl:Class>
+<owl:Class rdf:about="      <entity1 rdf:resource='Person">
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeChair"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Chair_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ConferenceMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='email"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='hasEmail"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Conference"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Conference"/>
+</owl:Class>
+<owl:Class rdf:about="      <entity2 rdf:resource='Person">
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeChair"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Chair_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ConferenceMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='email"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='hasEmail"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Conference"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Conference"/>
+</owl:Class>
+<owl:Class rdf:about="      <entity1 rdf:resource='Conference">
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeChair"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Chair_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ConferenceMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='email"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='hasEmail"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Person"/>
+</owl:Class>
+<owl:Class rdf:about="      <entity2 rdf:resource='Conference">
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeChair"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Chair_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Administrator"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ProgramCommitteeMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member_PC"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='ConferenceMember"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Member"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='email"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='hasEmail"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Person"/>
+</owl:Class>
+<owl:Class rdf:about="Reviewer">
+<owl:disjointWith rdf:resource="Author"/>
+<owl:disjointWith rdf:resource="Person"/>
+<owl:disjointWith rdf:resource="Review"/>
+</owl:Class>
+<owl:Class rdf:about="Author">
+<owl:disjointWith rdf:resource="Reviewer"/>
+<owl:disjointWith rdf:resource="Person"/>
+<owl:disjointWith rdf:resource="Review"/>
+</owl:Class>
+<owl:Class rdf:about="Person">
+<owl:disjointWith rdf:resource="Reviewer"/>
+<owl:disjointWith rdf:resource="Author"/>
+<owl:disjointWith rdf:resource="Review"/>
+</owl:Class>
+<owl:Class rdf:about="Review">
+<owl:disjointWith rdf:resource="Reviewer"/>
+<owl:disjointWith rdf:resource="Author"/>
+<owl:disjointWith rdf:resource="Person"/>
+</owl:Class>
+<owl:Class rdf:about="      <entity1 rdf:resource='Reviewer">
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Review"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Review"/>
+</owl:Class>
+<owl:Class rdf:about="      <entity2 rdf:resource='Reviewer">
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Review"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Review"/>
+</owl:Class>
+<owl:Class rdf:about="      <entity1 rdf:resource='Author">
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Reviewer"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Reviewer"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Review"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Review"/>
+</owl:Class>
+<owl:Class rdf:about="      <entity2 rdf:resource='Author">
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Reviewer"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Reviewer"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Review"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Review"/>
+</owl:Class>
+<owl:Class rdf:about="      <entity1 rdf:resource='Person">
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Reviewer"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Reviewer"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Review"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Review"/>
+</owl:Class>
+<owl:Class rdf:about="      <entity2 rdf:resource='Person">
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Reviewer"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Reviewer"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Review"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Review"/>
+</owl:Class>
+<owl:Class rdf:about="      <entity1 rdf:resource='Review">
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Reviewer"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Reviewer"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Person"/>
+</owl:Class>
+<owl:Class rdf:about="      <entity2 rdf:resource='Review">
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Reviewer"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Reviewer"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Author"/>
+<owl:disjointWith rdf:resource="      <entity1 rdf:resource='Person"/>
+<owl:disjointWith rdf:resource="      <entity2 rdf:resource='Person"/>
+</owl:Class>
+</rdf:RDF>

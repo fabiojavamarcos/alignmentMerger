@@ -6,14 +6,18 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Set;
 import java.util.StringTokenizer;
 
 import org.semanticweb.owlapi.apibinding.OWLManager;
@@ -36,6 +40,8 @@ public class AlignmentMerger {
 
 	private Alignment alignment = new Alignment();
 	private List<Alignment> alinhamentos = new ArrayList<Alignment>();
+	private List<Alignment> alinhamentosDuplicate = new ArrayList<Alignment>();
+	
 	NetworkofOntologies nOO = NetworkofOntologies.getNetworkofOntologies();
 
 	public AlignmentMerger(String[] args) {
@@ -73,8 +79,28 @@ public class AlignmentMerger {
 		        System.out.println("File " + listOfFiles[i].getName());
 		        files.add(listOfFiles[i]);
 		        alignment = processFile(listOfFiles[i]);
+		        boolean isNew;
 		        if (alignment!=null) {
-		        	alinhamentos.add(alignment);
+		        	/*isNew = alinhamentos.add(alignment);
+		        	if (!isNew) {
+		        		System.out.println("Alinhamento igual:"+ listOfFiles[i].getName());
+		        		alinhamentosDuplicate.add(alignment);
+			        	
+		        		
+		        	}
+		        	*/
+		        	boolean found = false;
+		        	for (Iterator i1 = alinhamentos.iterator(); i1.hasNext(); ) {
+		        		Alignment alinAux = (Alignment) i1.next();
+		        		if (alinAux.getOntologia1().getName() .equals( alignment.getOntologia1().getName()) && alinAux.getOntologia2().getName().equals( alignment.getOntologia2().getName())) {
+		        			found = true;
+		        		}
+		        	}
+		        	if (!found) {
+		        		alinhamentos.add(alignment);
+		        	} else {
+		        		alinhamentosDuplicate.add(alignment);
+		        	}
 		        }
 		    } else if (listOfFiles[i].isDirectory()) {
 		        System.out.println("Directory " + listOfFiles[i].getName());
@@ -95,8 +121,90 @@ public class AlignmentMerger {
 	    		saveOntology(ontologyObjects,dirTrab);
 	    	}
 	    }else{
-	    	System.out.println("No ontology found");
+	    	System.out.println("No alignment found to create owl file");
 	    }
+	    if (!alinhamentos.isEmpty()){
+	    	//checkCycles(alinhamentos);
+	    	Object [] ontologyObjects = new Object[2];
+	    	createRDFFromAlignments(alinhamentos, dirTrab, false);
+	    	
+	    }else{
+	    	System.out.println("No alingnment found to create RDF file");
+	    }
+	    if (!alinhamentosDuplicate.isEmpty()){
+	    	//checkCycles(alinhamentos);
+	    	Object [] ontologyObjects = new Object[2];
+	    	createRDFFromAlignments(alinhamentosDuplicate, dirTrab, true);
+	    	
+	    }else{
+	    	System.out.println("No alignment duplicate found");
+	    }
+	    
+	}
+
+	private void createRDFFromAlignments(List<Alignment> alinhamentos2, String dirTrab, boolean isDuplicate) {
+		// TODO Auto-generated method stub
+		File saidaRDF; 
+        for (Alignment alin : alinhamentos2) {
+        	String name1Ont = alin.getOntologia1().getName();
+            name1Ont = name1Ont.replaceAll("http://", "");
+            name1Ont = name1Ont.replaceAll("\"", "");
+
+        	String name2Ont = alin.getOntologia2().getName();
+            name2Ont = name2Ont.replaceAll("http://", "");
+            name2Ont = name2Ont.replaceAll("\"", "");
+  		
+			if (!isDuplicate)
+				saidaRDF = new File(dirTrab+"/ALIN-"+name1Ont+"-"+name2Ont+"OUT.rdf.txt");
+			else
+				saidaRDF = new File(dirTrab+"/ALIN-"+name1Ont+"-"+name2Ont+"DUPLICATE.rdf.txt");
+			BufferedWriter rdf;
+			try {
+				rdf = new BufferedWriter(new FileWriter(saidaRDF));		
+
+				rdf.write("<?xml version='1.0' encoding='utf-8' standalone='no'?>\n");
+				rdf.write("<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'\n");
+				rdf.write("         xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'\n");
+				rdf.write("         xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>\n");
+				rdf.write("<Alignment>\n");
+				rdf.write("  <xml>yes</xml>\n");
+				rdf.write("  <level>0</level>\n");
+				rdf.write("  <type>?*</type>\n");
+				rdf.write("  <onto1>\n");
+				rdf.write("    <Ontology rdf:about=\""+alin.getOntologia1().getName()+"\">\n");
+				rdf.write("      <location>"+alin.getOntologia1().getURI()+"</location>\n");
+				rdf.write("    </Ontology>\n");
+				rdf.write("  </onto1>\n");
+				rdf.write("  <onto2>\n");
+				rdf.write("    <Ontology rdf:about=\""+alin.getOntologia2().getName()+"\">\n");
+				rdf.write("      <location>"+alin.getOntologia2().getURI()+"</location>\n");
+				rdf.write("    </Ontology>\n");
+				rdf.write("  </onto2>\n");
+				
+			
+				List<Map> maps = alin.getMappings();
+				for (Map map : maps) {
+					rdf.write("  <map>\n");
+					rdf.write("    <Cell>\n");
+					rdf.write("      <entity1 rdf:resource='"+map.getEntity1()+"'/>\n");
+					rdf.write("      <entity2 rdf:resource='"+map.getEntity2()+"'/>\n");
+					rdf.write("      <relation>"+map.getRelation()+"</relation>\n");
+					rdf.write("      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>"+map.getMeasure()+"</measure>\n");
+					rdf.write("    </Cell>\n");
+					rdf.write("  </map>\n");
+					//System.out.println ("map");
+					//System.out.println (map.getEntity1());
+					//System.out.println (map.getEntity2());
+				}
+				rdf.write("</Alignment>\n");
+				rdf.write("</rdf:RDF>\n");
+				rdf.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
 	}
 
 	private void createOntologyFromAlignmentsTxt(List<Alignment> alinhamentos2, String dirTrab) {
@@ -331,12 +439,14 @@ public class AlignmentMerger {
 
 	private void checkCycles(List<Alignment> alinhamentos2) {
 		// TODO Auto-generated method stub
-		// starting from the first element in alignments
+		// starting from the first element in alignments 
+		/*
 	    if(nOO.checkCycles(alinhamentos.get(0).getOntologia1())) {
 	    	System.out.println("Tem ciclo");
 	    } else {
 	    	System.out.println("N�o tem ciclo");
 	    }
+	    */
 	}
 
 	private void createNetwork(List<Alignment> alinhamentos2) {
